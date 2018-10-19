@@ -1,0 +1,8 @@
+ <!--my note-->
+ 1.npm install -g @angular/cli 安装angular/cli （ng）;
+ 2.ng new my-app  新建工程
+ 3.ng serve --open  运行项目
+ 4.ng generate component componentName 新建组件
+ 5.ng generate module app-routing --flat --module=app
+ --flat放入文件src/app而不是自己的文件夹。
+ --module=app告诉CLI将其注册到imports数组中AppModule
