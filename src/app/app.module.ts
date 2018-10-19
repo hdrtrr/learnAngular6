@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeroesComponent } from './heroes/heroes.component';
 import {ModuleAModule} from './pages/moduleA/pages.moduleA';
 import {ModuleBModule} from './pages/moduleB/pages.moduleB';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import {ModuleBModule} from './pages/moduleB/pages.moduleB';
     HeroesComponent,
   ],
   imports: [
+    ModuleAModule,
+    ModuleBModule,
     BrowserModule,
+    CommonModule,
     NewcomponentComponentModule,
     AppRoutingModule,
-    ModuleAModule,
-    ModuleBModule
   ],
   providers: [],
   bootstrap: [AppComponent]
