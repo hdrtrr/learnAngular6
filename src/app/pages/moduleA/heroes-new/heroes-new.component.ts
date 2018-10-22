@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HEROES_NEW} from '../consts/HEROES_NEW';
 import {Hero} from '../../../newcomponent/utils/Hero';
+import {HeroService} from '../hero.service';
 
 @Component({
   selector: 'app-heroes-new',
@@ -9,10 +10,18 @@ import {Hero} from '../../../newcomponent/utils/Hero';
 })
 export class HeroesNewComponent implements OnInit {
   heroNew =  HEROES_NEW;
+  heroDetail = new Hero();
 
-  constructor() { }
+  constructor(private heroService: HeroService) { }
 
   ngOnInit() {
+  }
+
+  showDetail(detail) {
+    this.heroDetail = detail;
+  }
+  goHeroService() {
+    this.heroService.testMethod();
   }
 
 }

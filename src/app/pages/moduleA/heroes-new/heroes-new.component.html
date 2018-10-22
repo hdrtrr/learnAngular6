@@ -1,6 +1,11 @@
 <h2>新英雄</h2>
-<ul class="heroes">
-  <li *ngFor="let hn of heroNew">
+<button (click)="goHeroService()">heroService</button>
+<ul class="heroesnew">
+  <li *ngFor="let hn of heroNew" (click)="showDetail(hn)">
     <span>{{hn.name}}</span>
   </li>
+  <ul>
+    <li>{{heroDetail.id}}</li>
+    <li>{{heroDetail.name}}</li>
+  </ul>
 </ul>
